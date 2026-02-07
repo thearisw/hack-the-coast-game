@@ -6,8 +6,8 @@ key_down = keyboard_check(vk_down) ||  keyboard_check(ord("S"));
 
 hs = key_right - key_left;
 vs = key_down - key_up;
-x+= hs * 3;
-y+= vs * 3;
+
+
 
 if (place_meeting(x+hs,y,oWall)) {
 	while(abs(hs)>0.1) {
@@ -17,6 +17,7 @@ if (place_meeting(x+hs,y,oWall)) {
 	hs=0;
 	
 }
+x+= hs;
 
 if (place_meeting(x,y+vs,oWall)) {
 	while(abs(vs)>0.1) {
@@ -25,3 +26,4 @@ if (place_meeting(x,y+vs,oWall)) {
 	}
 	vs=0;
 }
+y+= vs;
