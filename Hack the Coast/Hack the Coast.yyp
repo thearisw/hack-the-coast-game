@@ -29,6 +29,8 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scr_globals_init","path":"scripts/scr_globals_init/scr_globals_init.yy",},},
+    {"id":{"name":"scr_phase_update","path":"scripts/scr_phase_update/scr_phase_update.yy",},},
+    {"id":{"name":"scr_time_update","path":"scripts/scr_time_update/scr_time_update.yy",},},
     {"id":{"name":"sFloor","path":"sprites/sFloor/sFloor.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
