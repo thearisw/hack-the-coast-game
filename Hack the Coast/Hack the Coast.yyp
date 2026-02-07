@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -24,9 +25,13 @@
   "resources":[
     {"id":{"name":"global_time","path":"objects/global_time/global_time.yy",},},
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
+    {"id":{"name":"oGameController","path":"objects/oGameController/oGameController.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"scr_globals_init","path":"scripts/scr_globals_init/scr_globals_init.yy",},},
+    {"id":{"name":"scr_phase_update","path":"scripts/scr_phase_update/scr_phase_update.yy",},},
+    {"id":{"name":"scr_time_update","path":"scripts/scr_time_update/scr_time_update.yy",},},
     {"id":{"name":"sFloor","path":"sprites/sFloor/sFloor.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},},
