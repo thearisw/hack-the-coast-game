@@ -1,12 +1,9 @@
-options = [];
-selected = 0;
-choice = false;
+// --- DATA ---
+options = [];        // Array of text strings
+selected = 0;        // Which option is highlighted (0 = top, 1 = bottom)
+parentid = noone;    // Who asked for this choice?
+confirmed = false;   // Has player pressed Enter?
 
-padding = 8;
-line_height = 16;
-box_width = 220;
-
-confirmed = false;
-
-parentid = 0;
-
+// --- VISUALS ---
+padding = 8;         // Space around text
+line_height = 12;    // Space between lines (adjust based on font size)
