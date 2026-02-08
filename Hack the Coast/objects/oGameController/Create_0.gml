@@ -1,5 +1,5 @@
 scr_globals_init();
-
+audio_play_sound(newHorizons2,1,true	)
 bed_list = ds_list_create();
 admitted = ds_list_create();
 
