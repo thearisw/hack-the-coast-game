@@ -13,12 +13,11 @@ if (keyboard_check_pressed(vk_enter)) {
 
 
 if (confirmed) {
-
-	show_debug_message(confirmed);
-	show_debug_message(selected);
-    if(selected==0) other.accepted = true;
-	else other.accepted = false;
-	other.choice = true;
+	
+    if(selected==0) parentid.accepted = true;
+	else parentid.accepted = false;
+	parentid.choice = true;
+	//show_debug_message(other.accepted)
+	instance_destroy();
     // destroy THIS choice box
-    instance_destroy();
 }

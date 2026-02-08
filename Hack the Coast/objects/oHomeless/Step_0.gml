@@ -38,11 +38,11 @@ if(!trigger) {
 	trigger=true
 	with(instance_create_layer(room_width/2, room_height-10, "UI", oChoiceBox)) {
 		options = ["Allow entry", "Turn away"];
-		other.choice = choice;
+		parentid = other.id;
 		
 	}
 }
 
-	show_debug_message(accepted);
+	//show_debug_message(accepted);
 if(choice && accepted) accepted =true;
 else if(choice && !accepted) instance_destroy();
