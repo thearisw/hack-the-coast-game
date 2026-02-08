@@ -28,7 +28,7 @@ var display_mins = floor(global.game_min mod 60);
 
 // Simple padding for minutes (adds a '0' if less than 10)
 var min_pad = (display_mins < 10) ? "0" : "";
-var money_string = string(global.money);
+var staff_string = string(global.staff_count);
 
 // 5. Draw the Stats
 draw_set_font(Clock_Font); // Ensure you have a pixel font created
@@ -36,14 +36,14 @@ var draw_x = margin + 8;
 var draw_y = room_height - 30;
 var line_height = 10;
 
-draw_text(draw_x, draw_y, "Money: " + money_string);
+draw_text(draw_x, draw_y, "Staff: " + staff_string);
 
-// Optional: Resource bar for Staff satisfaction
+// Optional: Resource bar for Food
 var bar_width = 100;
 var bar_height = 8;
-var satisfaction = (global.satisfaction / 100);
+var food_pct = (global.food_rations / 100);
 draw_set_font(Clock_Font); // Ensure you have a pixel font created
-draw_text(draw_x, draw_y+line_height, "Satisfaction:");
+draw_text(draw_x, draw_y+line_height, "Food:");
 draw_set_color(c_red);
 
-draw_rectangle(draw_x+110, draw_y + (line_height), draw_x + 110 +(bar_width * satisfaction), draw_y + (line_height) + bar_height, false);
+draw_rectangle(draw_x+70, draw_y + (line_height), draw_x + 70 +(bar_width * food_pct), draw_y + (line_height) + bar_height, false);
