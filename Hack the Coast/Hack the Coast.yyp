@@ -38,6 +38,8 @@
     {"id":{"name":"scr_phase_update","path":"scripts/scr_phase_update/scr_phase_update.yy",},},
     {"id":{"name":"scr_time_update","path":"scripts/scr_time_update/scr_time_update.yy",},},
     {"id":{"name":"Script4","path":"scripts/Script4/Script4.yy",},},
+    {"id":{"name":"HomelessBackIdle","path":"sprites/HomelessBackIdle/HomelessBackIdle.yy",},},
+    {"id":{"name":"HomelessWalkBack","path":"sprites/HomelessWalkBack/HomelessWalkBack.yy",},},
     {"id":{"name":"HomelessWalkFront","path":"sprites/HomelessWalkFront/HomelessWalkFront.yy",},},
     {"id":{"name":"PlayerFrontWalk","path":"sprites/PlayerFrontWalk/PlayerFrontWalk.yy",},},
     {"id":{"name":"sFloor","path":"sprites/sFloor/sFloor.yy",},},
