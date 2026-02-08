@@ -1,22 +1,20 @@
-// bed system
+// Bed system
 assigned_bed = noone;
 hidden = false;
 
-// movement/anim state
-facing = "front"; // "back","left","right"
+// Facing/animation state
+facing = "front";
 moving = false;
 
-// sprite set (your homeless set)
-spr_front_idle = HomelessFrontIdle;
-spr_back_idle  = HomelessBackIdle;
-spr_left_idle  = HomelessLeftIdle;
-spr_right_idle = HomelessRightIdle;
+// Sprite slots (children fill these)
+spr_front_idle = noone;
+spr_back_idle  = noone;
+spr_left_idle  = noone;
+spr_right_idle = noone;
 
-spr_front_walk = HomelessWalkFront;
-spr_back_walk  = HomelessWalkBack;
-spr_left_walk  = HomelessWalkLeft;
-spr_right_walk = HomelessWalkRight;
+spr_front_walk = noone;
+spr_back_walk  = noone;
+spr_left_walk  = noone;
+spr_right_walk = noone;
 
-// start sprite
-sprite_index = spr_front_idle;
 image_speed = 0.2;

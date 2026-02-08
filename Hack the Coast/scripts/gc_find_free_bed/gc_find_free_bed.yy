@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gc_find_free_bed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gc_find_free_bed",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

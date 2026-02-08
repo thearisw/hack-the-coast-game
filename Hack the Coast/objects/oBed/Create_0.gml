@@ -1,9 +1,10 @@
 occupied = false;
+assigned_id = noone;
 
-// assign these per-child bed type (see next section)
-spr_empty = sprite_index;   // fallback
-spr_full  = -1;             // fallback
+// children will override these
+spr_empty = sprite_index;
+spr_full  = sprite_index;
 
-assigned_id = noone;        // instance id of homeless person assigned
-wake_dx = 18;               // where they appear in morning (relative to bed)
+// where NPC appears in the morning relative to bed
+wake_dx = 18;
 wake_dy = 10;
