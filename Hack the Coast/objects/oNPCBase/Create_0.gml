@@ -18,3 +18,8 @@ spr_left_walk  = noone;
 spr_right_walk = noone;
 
 image_speed = 0.2;
+
+wander_timer = irandom_range(30, 90);
+wander_radius = 64; // pixels
+home_x = x;
+home_y = y;
