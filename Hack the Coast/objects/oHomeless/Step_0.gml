@@ -7,13 +7,11 @@ visible = true;
 // -------------------------
 if (!variable_instance_exists(id, "home_x")) home_x = room_width/2;
 if (!variable_instance_exists(id, "home_y")) home_y = room_height/2;
-if (!variable_instance_exists(id, "wander_radius")) wander_radius = 30;
+if (!variable_instance_exists(id, "wander_radius")) wander_radius = 60;
 if (!variable_instance_exists(id, "wander_timer")) wander_timer = irandom_range(30, 90);
 
 // function-like block: choose a new wander target
 var do_wander = function() {
-	show_debug_message(wander_timer)
-
 
     if (wander_timer <= 0) {
         targetX = home_x + irandom_range(-wander_radius, wander_radius);
@@ -21,12 +19,11 @@ var do_wander = function() {
         wander_timer = irandom_range(30, 90);
     }
 };
-
+wander_timer--;
 // -------------------------
 // PHASE BEHAVIOR: target selection
 // -------------------------
 if (global.phase == global.P_NIGHT) {
-	show_debug_message("0")
 
     // go to bed ONLY at night
     if ( instance_exists(oBed)) {
