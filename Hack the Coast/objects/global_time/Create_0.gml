@@ -8,3 +8,5 @@ global.P_NIGHT  = 2;
 
 global.phase = global.P_INTAKE;
 global.phase_t = 0;
+
+global.phase_string = "day";
