@@ -33,6 +33,14 @@ else if (global.phase == global.P_NIGHT && global.phase_t >= night_len) {
     global.phase = global.P_INTAKE; global.phase_t = 0;
 }
 
+else if (global.phase == global.P_NIGHT && global.phase_t >= night_len) {
+    // THIS IS THE MORNING ROLLOVER
+    global.phase = global.P_INTAKE; 
+    global.phase_t = 0;
+    
+    global.day += 1; // Increment the day here!
+}
+
 if (global.phase == global.P_DAY && global.phase_t >= day_len) {
     // --- TRIGGER NIGHT TRANSITION ---
     global.phase = global.P_NIGHT; 
@@ -47,9 +55,9 @@ if (global.phase == global.P_DAY && global.phase_t >= day_len) {
 
 function get_phase_name() {
     switch (global.phase) {
-        case global.P_INTAKE: return "INTAKE";
+        case global.P_INTAKE: return "MORNING (INTAKE)";
         case global.P_DAY:    return "DAY";
-        case global.P_NIGHT:  return "NIGHT";
+        case global.P_NIGHT:  return "NIGHT (REST)";
         default:              return "UNKNOWN";
     }
 }
