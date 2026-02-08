@@ -96,7 +96,7 @@ if (active_zone != noone) {
         
         // IF MENU IS CLOSED: Show/Update the info text
         if (!instance_exists(my_textbox)) {
-            my_textbox = scr_dialogue_show_spec(_full_text, 100,100);
+            my_textbox = scr_dialogue_show(_full_text);
         } else {
             my_textbox.text = _full_text;
         }

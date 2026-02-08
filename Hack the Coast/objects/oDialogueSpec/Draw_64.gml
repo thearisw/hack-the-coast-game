@@ -10,8 +10,8 @@ var _sep = 12;
 // ---------------------------------
 
 // 2. POSITIONING
-var _x = x
-var _y = y
+var _x = display_get_gui_width() / 2;
+var _y = display_get_gui_height() - 80;
 
 // 3. CALCULATE BOX SIZE
 var _padding = 8;
