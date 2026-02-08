@@ -40,7 +40,7 @@ draw_set_color(c_white);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 
-draw_text(_center_x, _top_y, _txt + " - "+ get_phase_name());
+draw_text(_center_x, _top_y, _txt + " " + get_phase_name());
 
 // --- CLEANUP ---
 draw_set_halign(fa_left); // Always reset alignment to be safe!
