@@ -7,12 +7,13 @@ visible = true;
 // -------------------------
 if (!variable_instance_exists(id, "home_x")) home_x = room_width/2;
 if (!variable_instance_exists(id, "home_y")) home_y = room_height/2;
-if (!variable_instance_exists(id, "wander_radius")) wander_radius = 10;
+if (!variable_instance_exists(id, "wander_radius")) wander_radius = 30;
 if (!variable_instance_exists(id, "wander_timer")) wander_timer = irandom_range(30, 90);
 
 // function-like block: choose a new wander target
 var do_wander = function() {
-    wander_timer--;
+	show_debug_message(wander_timer)
+
 
     if (wander_timer <= 0) {
         targetX = home_x + irandom_range(-wander_radius, wander_radius);
@@ -25,32 +26,24 @@ var do_wander = function() {
 // PHASE BEHAVIOR: target selection
 // -------------------------
 if (global.phase == global.P_NIGHT) {
+	show_debug_message("0")
 
     // go to bed ONLY at night
-    if (assigned_bed != noone && instance_exists(assigned_bed)) {
-
-        var bx = assigned_bed.x;
-        var by = assigned_bed.y;
-
-        // Try several approach points around the bed until one isn't blocked by a wall
-        // (Prevents "freeze" when your target point is inside a wall/bed area.)
-        var tx, ty;
-        var found = false;
-
+    if ( instance_exists(oBed)) {
 		var close_bed = instance_nearest(x,y,oBed)
-		
+        var bx = close_bed.x;
+        var by = close_bed.y;
 
-        if (found) {
             targetX = close_bed.x;
             targetY = close_bed.y;
-        }
 
     } else {
         // No bed assigned? Don't freeze—wander instead
         do_wander();
     }
 
-} else if (accepted && global.phase == global.P_DAY){
+}
+if ( global.phase == global.P_DAY){
     // DAY / INTAKE: wander around (loiter)
     do_wander();
 }

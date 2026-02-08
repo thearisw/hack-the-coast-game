@@ -2,7 +2,10 @@ event_inherited();
 targetX=100;
 targetY=100;
 // shared homeless state
-
+ home_x = room_width/2;
+home_y = room_height/2;
+wander_radius = 30;
+wander_timer = irandom_range(30, 90);
 parentid = self;
 npc_kind = "homeless";
 
