@@ -37,3 +37,7 @@ if(keyboard_check_pressed(ord("E"))) {
     room_height-10
 )
 }
+
+if (place_meeting(x+hs,y,oInteractionZone)) {
+	
+}

@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oBedZone",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oInteractionZone",
+  "eventList":[],
   "managed":true,
-  "name":"oBedZone",
+  "name":"oInteractionZone",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"oInteractionZone",
-    "path":"objects/oInteractionZone/oInteractionZone.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sZone_Trigger",
-    "path":"sprites/sZone_Trigger/sZone_Trigger.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

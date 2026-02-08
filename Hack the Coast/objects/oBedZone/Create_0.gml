@@ -1,11 +1,4 @@
-/// oZone: Create
-zone_type = "beds";   // set per instance: "intake","beds","supplies","staff"
-zone_w_tiles = 2;     // tiles
-zone_h_tiles = 5;     // tiles
-grid = 16;
-
-debug_draw = true;
-
-// Snap center to tile centers (fixes odd tile sizes like 5 tall)
-x = floor(x / grid) * grid + ((zone_w_tiles mod 2 == 1) ? grid * 0.5 : 0);
-y = floor(y / grid) * grid + grid * 0.5;
+zone_name = "SLEEPING QUARTERS";
+current_amount = global.beds_occupied; // Variable for the UI to read
+max_limit = global.bed_capacity;
+action_text = "[SPACE] Manage Policy"; // Custom text for this zone
