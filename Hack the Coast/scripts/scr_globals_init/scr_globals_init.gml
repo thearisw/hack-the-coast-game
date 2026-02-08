@@ -1,7 +1,7 @@
 function scr_globals_init() {
     // --- BED VARIABLES ---
-    global.beds_occupied = 5;      
-    global.bed_capacity = 8;       
+    global.beds_occupied = 0;      
+    global.bed_capacity = 10;       
     global.bed_policy = "Strict";
     
     // --- FOOD VARIABLES ---
