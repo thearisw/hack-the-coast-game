@@ -32,8 +32,6 @@ y+= vs;
 
 if(keyboard_check_pressed(ord("E"))) {
 	scr_dialogue_show(
-    "I’ve been waiting since last night.",
-    room_width/2,
-    room_height-10
+    "I’ve been waiting since last night."
 )
 }
