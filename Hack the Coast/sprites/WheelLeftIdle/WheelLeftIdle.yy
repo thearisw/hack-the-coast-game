@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
-  "%Name":"PlayerLeftIdle",
+  "%Name":"WheelLeftIdle",
   "bboxMode":0,
   "bbox_bottom":21,
-  "bbox_left":9,
-  "bbox_right":14,
+  "bbox_left":3,
+  "bbox_right":15,
   "bbox_top":1,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"4400aeb2-12fe-46bd-a34d-da9cfee8408d","name":"4400aeb2-12fe-46bd-a34d-da9cfee8408d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"728c4650-4db9-415f-b47e-0edf96131554","name":"728c4650-4db9-415f-b47e-0edf96131554","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":24,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"3799c56a-ef6f-4af6-a654-d33b81c7b738","blendMode":0,"displayName":"default","isLocked":false,"name":"3799c56a-ef6f-4af6-a654-d33b81c7b738","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"000f13cd-6ee8-4cac-a102-5e3186e219b7","blendMode":0,"displayName":"default","isLocked":false,"name":"000f13cd-6ee8-4cac-a102-5e3186e219b7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"PlayerLeftIdle",
+  "name":"WheelLeftIdle",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"PlayerLeftIdle",
+    "%Name":"WheelLeftIdle",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"PlayerLeftIdle",
+    "name":"WheelLeftIdle",
     "playback":1,
     "playbackSpeed":3.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4400aeb2-12fe-46bd-a34d-da9cfee8408d","path":"sprites/PlayerLeftIdle/PlayerLeftIdle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"db6ed95e-5d7f-4c74-ac56-d37b6fb8224c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"728c4650-4db9-415f-b47e-0edf96131554","path":"sprites/WheelLeftIdle/WheelLeftIdle.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a82b7207-7e97-49ed-bf53-a8115c439fec","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
