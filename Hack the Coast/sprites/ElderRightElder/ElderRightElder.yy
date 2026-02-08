@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
-  "%Name":"HomelessWalkLeft",
+  "%Name":"ElderRightElder",
   "bboxMode":0,
-  "bbox_bottom":21,
-  "bbox_left":7,
-  "bbox_right":17,
+  "bbox_bottom":22,
+  "bbox_left":9,
+  "bbox_right":14,
   "bbox_top":1,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,17 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"52924329-1908-4e89-a020-5735bf74e881","name":"52924329-1908-4e89-a020-5735bf74e881","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"ee495cdf-8c05-4bcf-8d19-38c30ca56119","name":"ee495cdf-8c05-4bcf-8d19-38c30ca56119","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"57da04a1-23d4-4604-a0f0-539646ef4164","name":"57da04a1-23d4-4604-a0f0-539646ef4164","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":24,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"ad502053-4201-4c45-8467-9fed191f9b98","blendMode":0,"displayName":"default","isLocked":false,"name":"ad502053-4201-4c45-8467-9fed191f9b98","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"ea59cc49-0c8b-4693-a886-1054f0d8eda2","blendMode":0,"displayName":"default","isLocked":false,"name":"ea59cc49-0c8b-4693-a886-1054f0d8eda2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"HomelessWalkLeft",
+  "name":"ElderRightElder",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -34,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"v1",
-    "%Name":"HomelessWalkLeft",
+    "%Name":"ElderRightElder",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -50,7 +49,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":2.0,
+    "length":1.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -58,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"HomelessWalkLeft",
+    "name":"ElderRightElder",
     "playback":1,
     "playbackSpeed":3.0,
     "playbackSpeedType":0,
@@ -70,11 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"52924329-1908-4e89-a020-5735bf74e881","path":"sprites/HomelessWalkLeft/HomelessWalkLeft.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"efafa507-c028-4bbf-a4a3-f01d25281f60","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ee495cdf-8c05-4bcf-8d19-38c30ca56119","path":"sprites/HomelessWalkLeft/HomelessWalkLeft.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"920cef79-3ac2-4d6e-90c9-44b6d23408bb","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"57da04a1-23d4-4604-a0f0-539646ef4164","path":"sprites/ElderRightElder/ElderRightElder.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"005a509d-3470-4d4f-b42d-680e61d63998","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
