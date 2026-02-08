@@ -37,34 +37,12 @@ if (global.phase == global.P_NIGHT) {
         var tx, ty;
         var found = false;
 
-        // 1) below bed
-        tx = bx; ty = by + 16;
-        if (!place_meeting(tx, ty, oWall)) { found = true; }
-
-        // 2) right of bed
-        if (!found) {
-            tx = bx + 16; ty = by;
-            if (!place_meeting(tx, ty, oWall)) { found = true; }
-        }
-
-        // 3) left of bed
-        if (!found) {
-            tx = bx - 16; ty = by;
-            if (!place_meeting(tx, ty, oWall)) { found = true; }
-        }
-
-        // 4) above bed
-        if (!found) {
-            tx = bx; ty = by - 16;
-            if (!place_meeting(tx, ty, oWall)) { found = true; }
-        }
+		var close_bed = instance_nearest(x,y,oBed)
+		
 
         if (found) {
-            targetX = tx;
-            targetY = ty;
-        } else {
-            // If no approach point is walkable, don't freeze—wander instead
-            do_wander();
+            targetX = close_bed.x;
+            targetY = close_bed.y;
         }
 
     } else {
@@ -72,7 +50,7 @@ if (global.phase == global.P_NIGHT) {
         do_wander();
     }
 
-} else if (accepted){
+} else if (accepted && global.phase == global.P_DAY){
     // DAY / INTAKE: wander around (loiter)
     do_wander();
 }
