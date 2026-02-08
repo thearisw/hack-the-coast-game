@@ -1,6 +1,7 @@
 key_left =0 ;
 key_right =0;
-
+facingX=0;
+facingY=0;
 hs = 0;
 vs = 0;
 window_set_fullscreen(true);

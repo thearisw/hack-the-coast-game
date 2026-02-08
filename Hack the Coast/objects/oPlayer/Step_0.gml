@@ -8,6 +8,12 @@ hs = key_right - key_left;
 vs = key_down - key_up;
 
 if(vs>0) sprite_index = PlayerFrontWalk;
+else if(vs<0) sprite_index = PlayerBackWalk;
+else if(hs>0) sprite_index = PlayerRightWalk;
+else if(hs<0) sprite_index = PlayerLeftWalk;
+else if(vs==0) sprite_index = PlayerFrontIdle;
+else sprite_index = PlayerRightIdle;
+
 
 
 
