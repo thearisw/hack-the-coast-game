@@ -29,6 +29,7 @@
     {"id":{"name":"Dialogue_Text","path":"fonts/Dialogue_Text/Dialogue_Text.yy",},},
     {"id":{"name":"Furniture","path":"objects/Furniture/Furniture.yy",},},
     {"id":{"name":"Global_Time","path":"objects/Global_Time/Global_Time.yy",},},
+    {"id":{"name":"oBed","path":"objects/oBed/oBed.yy",},},
     {"id":{"name":"oBed1","path":"objects/oBed1/oBed1.yy",},},
     {"id":{"name":"oBed2","path":"objects/oBed2/oBed2.yy",},},
     {"id":{"name":"oBed3","path":"objects/oBed3/oBed3.yy",},},
