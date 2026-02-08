@@ -72,7 +72,7 @@ if (global.phase == global.P_NIGHT) {
         do_wander();
     }
 
-} else {
+} else if (accepted){
     // DAY / INTAKE: wander around (loiter)
     do_wander();
 }

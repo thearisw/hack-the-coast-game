@@ -1,7 +1,5 @@
-if(occupied){
-	sprite_index = Bed2Full
-}
-
-else{
-	sprite_index = Bed2
+if (occupied && global.phase == global.P_NIGHT) {
+    sprite_index = Bed2Full;
+} else {
+    sprite_index = Bed2;
 }

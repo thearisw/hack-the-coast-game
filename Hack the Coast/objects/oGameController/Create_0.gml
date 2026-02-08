@@ -10,3 +10,9 @@ hide_y = -10000;
 night_hide_delay_min = 30;   // change this (ex: 10, 30, 60)
 night_start_min = 0;
 night_hiding_done = false;
+
+
+spawn_timer = 0;
+spawn_rate = 15 * 30; // Spawn someone every 15 seconds)
+max_spawn_per_intake = 8; // Limit how many show up each morning
+spawn_count = 0;
