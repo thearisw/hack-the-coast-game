@@ -1,4 +1,10 @@
-/// obj_clock : Create
+dt = 0;
+global.game_min = 11 * 60;
 
-dt = 0;          // delta time in seconds (this frame)
-time_s = 0;      // total elapsed game time in seconds
+// phase
+global.P_INTAKE = 0;
+global.P_DAY    = 1;
+global.P_NIGHT  = 2;
+
+global.phase = global.P_INTAKE;
+global.phase_t = 0;

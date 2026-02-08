@@ -1,13 +1,11 @@
-/// Draw GUI (or Draw) event
 draw_set_font(Clock_Font);
 draw_set_color(c_white);
 
-var total = floor(time_s);
+var gm = floor(global.game_min);
+gm = (gm div 30) * 30;
 
-var s = total mod 60;
-var m = (total div 60) mod 60;
-var h = (total div 3600) mod 24;
+var h = (gm div 60) mod 24;
+var m = gm mod 60;
 
 function two(n) { return (n < 10) ? "0" + string(n) : string(n); }
-
-draw_text(16, 16, two(h) + ":" + two(m) + ":" + two(s));
+draw_text(16, 16, two(h) + ":" + two(m));
