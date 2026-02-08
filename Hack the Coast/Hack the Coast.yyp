@@ -35,6 +35,7 @@
     {"id":{"name":"oBed1","path":"objects/oBed1/oBed1.yy",},},
     {"id":{"name":"oBed2","path":"objects/oBed2/oBed2.yy",},},
     {"id":{"name":"oBed3","path":"objects/oBed3/oBed3.yy",},},
+    {"id":{"name":"oBedLogic","path":"objects/oBedLogic/oBedLogic.yy",},},
     {"id":{"name":"oBedZone","path":"objects/oBedZone/oBedZone.yy",},},
     {"id":{"name":"oBookshelf","path":"objects/oBookshelf/oBookshelf.yy",},},
     {"id":{"name":"oCarpet","path":"objects/oCarpet/oCarpet.yy",},},

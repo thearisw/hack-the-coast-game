@@ -1,11 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"PlayerFrontIdle",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":19,
   "bbox_left":7,
   "bbox_right":15,
-  "bbox_top":3,
+  "bbox_top":12,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
