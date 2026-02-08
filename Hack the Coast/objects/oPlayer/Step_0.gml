@@ -96,7 +96,7 @@ if (active_zone != noone) {
         
         // IF MENU IS CLOSED: Show/Update the info text
         if (!instance_exists(my_textbox)) {
-            my_textbox = scr_dialogue_show(_full_text);
+            my_textbox = scr_dialogue_show_spec(_full_text, 100,100);
         } else {
             my_textbox.text = _full_text;
         }
@@ -115,6 +115,8 @@ if (active_zone != noone) {
                     
                     // Trigger the choice box specifically for THEM
                     scr_choice_show(["Accept", "Reject"], _first_person, "intake_decision");
+					var desc = scr_random_desc(_first_person.age,_first_person.sex,_first_person.disabilities);
+					scr_dialogue_show_spec(desc, room_width/2,100);
                 }
             }
         } 

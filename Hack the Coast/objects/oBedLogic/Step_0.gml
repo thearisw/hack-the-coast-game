@@ -12,5 +12,6 @@ with (oHomeless) {
 }
 
 // 3. Update the global variable
-global.beds_occupied = _count;
-show_debug_message(global.beds_occupied)
+global.beds_occupied = _count
+
+if(global.bed_policy=="overcrowded") global.staff_fatigue+=1;
