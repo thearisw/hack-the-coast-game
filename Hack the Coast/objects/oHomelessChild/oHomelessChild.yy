@@ -12,8 +12,8 @@
     "path":"folders/Objects/NPC.yy",
   },
   "parentObjectId":{
-    "name":"oNPCBase",
-    "path":"objects/oNPCBase/oNPCBase.yy",
+    "name":"oHomeless",
+    "path":"objects/oHomeless/oHomeless.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"ChildFrontIdle",
+    "path":"sprites/ChildFrontIdle/ChildFrontIdle.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

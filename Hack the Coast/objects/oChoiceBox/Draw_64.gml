@@ -21,7 +21,7 @@ _box_w += (padding * 4); // Add extra width for the ">" arrow
 
 // 4. DRAW BACKGROUND (Semi-transparent Black)
 draw_set_color(c_black);
-draw_set_alpha(0.8);
+draw_set_alpha(0.4);
 
 draw_rectangle(
     _x - _box_w/2, 
