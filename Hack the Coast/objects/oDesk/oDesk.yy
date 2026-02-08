@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oStaff2",
+  "%Name":"oDesk",
   "eventList":[],
   "managed":true,
-  "name":"oStaff2",
+  "name":"oDesk",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPC",
-    "path":"folders/Objects/NPC.yy",
+    "name":"Furniture",
+    "path":"folders/Objects/Furniture.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Staff2Front",
-    "path":"sprites/Staff2Front/Staff2Front.yy",
+    "name":"Desk",
+    "path":"sprites/Desk/Desk.yy",
   },
   "spriteMaskId":null,
   "visible":true,
