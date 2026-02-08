@@ -34,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Button",
+    "path":"sprites/Button/Button.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
