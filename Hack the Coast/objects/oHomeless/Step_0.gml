@@ -32,3 +32,12 @@ y+= vs;
 
 
 if(hs>0) sprite_index = HomelessRightWalk;
+
+
+if(!trigger) {
+	trigger = true;
+	var choice = scr_choice_show(
+    ["Allow entry", "Turn away"],
+    room_width/2,
+    room_height-10);
+}

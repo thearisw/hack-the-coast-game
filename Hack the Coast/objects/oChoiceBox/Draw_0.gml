@@ -1,4 +1,4 @@
-draw_set_font(fDialogueSmall);
+draw_set_font(Clock_Font);
 
 var box_height = array_length(options) * line_height + padding * 2;
 
