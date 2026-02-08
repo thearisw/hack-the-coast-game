@@ -19,7 +19,7 @@ if (global.phase == global.P_NIGHT && !night_hiding_done) {
         night_hiding_done = true;
     }
 }
-if (global.phase == global.P_INTAKE) {
+if (global.phase == global.P_DAY) {
     
     if (spawn_count < max_spawn_per_intake) {
         spawn_timer++;
