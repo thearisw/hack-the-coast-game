@@ -15,7 +15,7 @@ for (var i = 0; i < array_length(options); i++) {
     var ty = by + padding + i * line_height;
 
     if (i == selected) {
-        draw_set_color(c_black);
+        draw_set_color(c_gray);
         draw_rectangle(tx - 4, ty - 2, bx + box_width - padding, ty + line_height - 2, false);
     }
 
