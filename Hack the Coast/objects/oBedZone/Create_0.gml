@@ -1,11 +1,8 @@
-/// oZone: Create
-zone_type = "beds";   // set per instance: "intake","beds","supplies","staff"
-zone_w_tiles = 2;     // tiles
-zone_h_tiles = 5;     // tiles
-grid = 16;
+// 1. Identify this zone
+zone_name = "SLEEPING QUARTERS";
 
-debug_draw = true;
+// 2. Tell the menu system what options to show later
+menu_context = "bed_menu"; 
 
-// Snap center to tile centers (fixes odd tile sizes like 5 tall)
-x = floor(x / grid) * grid + ((zone_w_tiles mod 2 == 1) ? grid * 0.5 : 0);
-y = floor(y / grid) * grid + grid * 0.5;
+// 3. Hide the turquoise box in-game (so we only see your bed pixel art)
+visible = false;
