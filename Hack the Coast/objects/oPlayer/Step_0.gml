@@ -36,13 +36,43 @@ if(keyboard_check_pressed(ord("E"))) {
 )
 }
 
-// 1. Detect if we are standing on a zone
+// --- ZONE DETECTION ---
 active_zone = instance_place(x, y, oInteractionZone);
 
-// 2. Input to Open Menu
 if (active_zone != noone) {
+    
+    // 1. FORMAT THE TEXT
+    // We use "\n" to create line breaks
+    var _full_text = active_zone.zone_name + "\n";
+    
+    // Add dynamic stats based on zone type
+    if (active_zone.menu_context == "bed_menu") {
+        _full_text += "Occupied: " + string(global.beds_occupied) + "/" + string(global.bed_capacity) + "\n";
+        _full_text += "Policy: " + string(global.bed_policy) + "\n";
+    }
+    
+    _full_text += "[SPACE] Manage";
+
+    // 2. MANAGE THE BOX
+    if (!instance_exists(my_textbox)) {
+        // If box doesn't exist, Create it!
+        my_textbox = scr_dialogue_show(_full_text);
+    } else {
+        // If box exists, Update the text (so numbers change in real-time)
+        my_textbox.text = _full_text;
+    }
+    
+    // 3. INPUT (Your existing logic)
     if (keyboard_check_pressed(vk_space)) {
-        // We will build this menu script in the next step!
         create_menu(active_zone.menu_context);
+    }
+
+} else {
+    // --- WE ARE NOT IN A ZONE ---
+    
+    // If we still have a textbox open, destroy it!
+    if (instance_exists(my_textbox)) {
+        instance_destroy(my_textbox);
+        my_textbox = noone;
     }
 }
