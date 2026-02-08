@@ -7,4 +7,4 @@ window_set_fullscreen(true);
 
 accepted = false;
 trigger = false;
-choice=true;
+choice=false;
