@@ -1,8 +1,8 @@
 {
   "$GMSprite":"v2",
   "%Name":"WomenFrontIdle",
-  "bboxMode":0,
-  "bbox_bottom":21,
+  "bboxMode":2,
+  "bbox_bottom":20,
   "bbox_left":7,
   "bbox_right":16,
   "bbox_top":2,

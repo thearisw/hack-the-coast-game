@@ -1,9 +1,9 @@
 {
   "$GMSprite":"v2",
   "%Name":"ChildBackWalk",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":17,
-  "bbox_left":6,
+  "bbox_left":7,
   "bbox_right":15,
   "bbox_top":1,
   "collisionKind":1,

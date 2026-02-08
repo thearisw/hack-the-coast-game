@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
   "%Name":"WomenBackWalk",
-  "bboxMode":0,
-  "bbox_bottom":21,
+  "bboxMode":2,
+  "bbox_bottom":20,
   "bbox_left":7,
-  "bbox_right":17,
+  "bbox_right":16,
   "bbox_top":2,
   "collisionKind":1,
   "collisionTolerance":0,

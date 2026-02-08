@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"ElderBackIdle",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":23,
   "bbox_left":7,
   "bbox_right":18,
