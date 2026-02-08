@@ -1,15 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"oInteractionZone",
-  "eventList":[],
+  "%Name":"oFoodZone",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oInteractionZone",
+  "name":"oFoodZone",
   "overriddenProperties":[],
   "parent":{
     "name":"Zones",
     "path":"folders/Objects/Zones.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oInteractionZone",
+    "path":"objects/oInteractionZone/oInteractionZone.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sZone_Trigger",
-    "path":"sprites/sZone_Trigger/sZone_Trigger.yy",
+    "name":"sFoodZone",
+    "path":"sprites/sFoodZone/sFoodZone.yy",
   },
   "spriteMaskId":null,
   "visible":true,
