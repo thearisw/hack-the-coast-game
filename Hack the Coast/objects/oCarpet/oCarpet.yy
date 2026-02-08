@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oDesk",
+  "%Name":"oCarpet",
   "eventList":[],
   "managed":true,
-  "name":"oDesk",
+  "name":"oCarpet",
   "overriddenProperties":[],
   "parent":{
     "name":"Furniture",
     "path":"folders/Objects/Furniture.yy",
   },
-  "parentObjectId":{
-    "name":"oWall",
-    "path":"objects/oWall/oWall.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Desk",
-    "path":"sprites/Desk/Desk.yy",
+    "name":"Carpet",
+    "path":"sprites/Carpet/Carpet.yy",
   },
   "spriteMaskId":null,
   "visible":true,

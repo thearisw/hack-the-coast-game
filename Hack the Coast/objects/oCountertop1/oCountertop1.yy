@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oDesk",
+  "%Name":"oCountertop1",
   "eventList":[],
   "managed":true,
-  "name":"oDesk",
+  "name":"oCountertop1",
   "overriddenProperties":[],
   "parent":{
     "name":"Furniture",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Desk",
-    "path":"sprites/Desk/Desk.yy",
+    "name":"Countertop1",
+    "path":"sprites/Countertop1/Countertop1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

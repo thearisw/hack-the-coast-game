@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oDesk",
+  "%Name":"oFridge",
   "eventList":[],
   "managed":true,
-  "name":"oDesk",
+  "name":"oFridge",
   "overriddenProperties":[],
   "parent":{
     "name":"Furniture",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Desk",
-    "path":"sprites/Desk/Desk.yy",
+    "name":"Fridge",
+    "path":"sprites/Fridge/Fridge.yy",
   },
   "spriteMaskId":null,
   "visible":true,
