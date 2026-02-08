@@ -34,10 +34,7 @@ y+= vs;
 
 
 if(hs>0) sprite_index = HomelessRightWalk;
-if(!trigger) {
-	trigger=true
-	scr_choice_show(["Allow entry", "Turn away"], other.id)
-}
+
 
 	//show_debug_message(accepted);
 if(choice && accepted) accepted =true;

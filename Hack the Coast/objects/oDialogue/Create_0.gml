@@ -1,6 +1,6 @@
 text = "";
 char_index = 0;
-type_speed = 0.05; // seconds per character
+type_speed = 0.02; // seconds per character
 timer = 0;
 
 bubble_width = 100;
