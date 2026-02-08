@@ -25,7 +25,7 @@ if (array_length(options) > 0) {
                 var ok = false;
 
                 if (instance_exists(oGameController)) {
-                    with (oGameController) ok = gc_admit_person(parentid);
+                    with (oGameController) ok = gc_admit_person(other.parentid);
                 }
 
                 parentid.accepted = ok; // only accept if a bed was assigned

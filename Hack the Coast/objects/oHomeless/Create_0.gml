@@ -2,6 +2,8 @@ event_inherited();
 targetX=100;
 targetY=100;
 // shared homeless state
+
+parentid = self;
 npc_kind = "homeless";
 
 hs = 0;
