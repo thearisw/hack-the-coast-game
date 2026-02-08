@@ -37,6 +37,8 @@
     {"id":{"name":"scr_globals_init","path":"scripts/scr_globals_init/scr_globals_init.yy",},},
     {"id":{"name":"scr_phase_update","path":"scripts/scr_phase_update/scr_phase_update.yy",},},
     {"id":{"name":"scr_time_update","path":"scripts/scr_time_update/scr_time_update.yy",},},
+    {"id":{"name":"HomelessWalkFront","path":"sprites/HomelessWalkFront/HomelessWalkFront.yy",},},
+    {"id":{"name":"PlayerFrontWalk","path":"sprites/PlayerFrontWalk/PlayerFrontWalk.yy",},},
     {"id":{"name":"sFloor","path":"sprites/sFloor/sFloor.yy",},},
     {"id":{"name":"sHomeless","path":"sprites/sHomeless/sHomeless.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
