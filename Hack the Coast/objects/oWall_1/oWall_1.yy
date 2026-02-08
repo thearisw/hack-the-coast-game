@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"sWall_1",
-    "path":"sprites/sWall_1/sWall_1.yy",
+    "name":"SideWallLeft",
+    "path":"sprites/SideWallLeft/SideWallLeft.yy",
   },
   "spriteMaskId":null,
   "visible":true,
