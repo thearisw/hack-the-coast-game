@@ -1,15 +1,17 @@
-targetX = room_width/2;
-targetY = room_height-20;
-hs = 0;
-vs =0
+event_inherited();
+npc_kind = "homeless";
 
-window_set_fullscreen(true);
+targetX = room_width / 2;
+targetY = room_height - 20;
+
+hs = 0;
+vs = 0;
 
 accepted = false;
 trigger = false;
-choice=false;
+choice = false;
 
 timer = 0;
 
-entranceDial=false;
+entranceDial = false;
 entranceChoice = false;

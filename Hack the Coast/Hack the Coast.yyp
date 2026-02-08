@@ -40,8 +40,18 @@
     {"id":{"name":"oFoodZone","path":"objects/oFoodZone/oFoodZone.yy",},},
     {"id":{"name":"oGameController","path":"objects/oGameController/oGameController.yy",},},
     {"id":{"name":"oHomeless","path":"objects/oHomeless/oHomeless.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"oIntakeZone","path":"objects/oIntakeZone/oIntakeZone.yy",},},
     {"id":{"name":"oInteractionZone","path":"objects/oInteractionZone/oInteractionZone.yy",},},
+=======
+    {"id":{"name":"oHomelessChild","path":"objects/oHomelessChild/oHomelessChild.yy",},},
+    {"id":{"name":"oHomelessElder","path":"objects/oHomelessElder/oHomelessElder.yy",},},
+    {"id":{"name":"oHomelessWheel","path":"objects/oHomelessWheel/oHomelessWheel.yy",},},
+    {"id":{"name":"oHomelessWomen","path":"objects/oHomelessWomen/oHomelessWomen.yy",},},
+    {"id":{"name":"oInteractionZone","path":"objects/oInteractionZone/oInteractionZone.yy",},},
+    {"id":{"name":"oIntro","path":"objects/oIntro/oIntro.yy",},},
+    {"id":{"name":"oNPCBase","path":"objects/oNPCBase/oNPCBase.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oStaffZone","path":"objects/oStaffZone/oStaffZone.yy",},},
     {"id":{"name":"oStats","path":"objects/oStats/oStats.yy",},},
