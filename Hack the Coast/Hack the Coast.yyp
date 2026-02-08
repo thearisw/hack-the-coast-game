@@ -34,6 +34,7 @@
     {"id":{"name":"oWall_1","path":"objects/oWall_1/oWall_1.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"scr_dialogue_show","path":"scripts/scr_dialogue_show/scr_dialogue_show.yy",},},
     {"id":{"name":"scr_globals_init","path":"scripts/scr_globals_init/scr_globals_init.yy",},},
     {"id":{"name":"scr_phase_update","path":"scripts/scr_phase_update/scr_phase_update.yy",},},
     {"id":{"name":"scr_time_update","path":"scripts/scr_time_update/scr_time_update.yy",},},
