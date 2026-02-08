@@ -1,4 +1,6 @@
+if(!variable_global_exists("phase") ) exit;
 // Draw GUI Event
+show_debug_message("A");
 var margin = 10;
 var ui_width = 160;
 var ui_height = 80;
@@ -12,9 +14,9 @@ draw_set_alpha(1.0);
 // 2. Draw an outline (using a lighter grey or a zone-specific color)
 draw_set_color(c_dkgray);
 draw_rectangle(margin, margin, margin + ui_width, margin + ui_height, true);
-
+if(!variable_global_exists("phase")) exit;
 // 3. Set text properties
-draw_set_font(fnt_pixel); // Ensure you have a pixel font created
+draw_set_font(Clock_Font); // Ensure you have a pixel font created
 draw_set_halign(fa_left);
 draw_set_color(c_white);
 
@@ -25,20 +27,18 @@ var display_mins = floor(global.game_min mod 60);
 
 // Simple padding for minutes (adds a '0' if less than 10)
 var min_pad = (display_mins < 10) ? "0" : "";
-var time_string = string(display_hours) + ":" + min_pad + string(display_mins);
+var money_string = string(global.money);
 
 // 5. Draw the Stats
 var draw_x = margin + 8;
 var draw_y = margin + 8;
 var line_height = 18;
 
-draw_text(draw_x, draw_y, "TIME: " + time_string);
-draw_text(draw_x, draw_y + line_height, "PHASE: " + get_phase_name(global.phase));
-draw_text(draw_x, draw_y + (line_height * 2), "BEDS: " + string(global.beds_filled) + "/" + string(global.beds_max));
+draw_text(room_width/2, room_height/2, "Money: " + money_string);
 
-// Optional: Resource bar for Staff Stress
+// Optional: Resource bar for Staff satisfaction
 var bar_width = 100;
 var bar_height = 8;
-var stress_percent = (global.staff_stress / 100);
+var satisfaction = (global.satisfaction / 100);
 draw_set_color(c_red);
-draw_rectangle(draw_x, draw_y + (line_height * 3.5), draw_x + (bar_width * stress_percent), draw_y + (line_height * 3.5) + bar_height, false);
+draw_rectangle(draw_x, draw_y + (line_height * 3.5), draw_x + (bar_width * satisfaction), draw_y + (line_height * 3.5) + bar_height, false);
