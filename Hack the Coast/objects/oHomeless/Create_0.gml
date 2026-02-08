@@ -8,3 +8,8 @@ window_set_fullscreen(true);
 accepted = false;
 trigger = false;
 choice=false;
+
+timer = 0;
+
+entranceDial=false;
+entranceChoice = false;
