@@ -33,4 +33,23 @@ else if (global.phase == global.P_NIGHT && global.phase_t >= night_len) {
     global.phase = global.P_INTAKE; global.phase_t = 0;
 }
 
+if (global.phase == global.P_DAY && global.phase_t >= day_len) {
+    // --- TRIGGER NIGHT TRANSITION ---
+    global.phase = global.P_NIGHT; 
+    global.phase_t = 0;
 
+    // Tell every homeless entity where to go
+    with (oHomeless) {
+        targetX = 30;
+        targetY = room_height / 2;
+    }
+}
+
+function get_phase_name() {
+    switch (global.phase) {
+        case global.P_INTAKE: return "INTAKE";
+        case global.P_DAY:    return "DAY";
+        case global.P_NIGHT:  return "NIGHT";
+        default:              return "UNKNOWN";
+    }
+}
