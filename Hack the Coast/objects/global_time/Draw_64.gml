@@ -1,6 +1,6 @@
 /// Draw GUI (or Draw) event
-
-// draw_set_font(fnt_digital); // <-- remove/comment this line
+draw_set_font(Clock_Font);
+draw_set_color(c_white);
 
 var total = floor(time_s);
 
