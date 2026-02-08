@@ -1,4 +1,4 @@
-if(occupied){
+if(global.phase = global.P_NIGHT){
 	sprite_index = Bed3Full
 }
 

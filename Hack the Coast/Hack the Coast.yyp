@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Music","folderPath":"folders/Music.yy","name":"Music","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/Objects/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Furniture","folderPath":"folders/Objects/Furniture.yy","name":"Furniture","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -88,6 +89,7 @@
     {"id":{"name":"scr_end_day_calculations","path":"scripts/scr_end_day_calculations/scr_end_day_calculations.yy",},},
     {"id":{"name":"scr_globals_init","path":"scripts/scr_globals_init/scr_globals_init.yy",},},
     {"id":{"name":"scr_random_desc","path":"scripts/scr_random_desc/scr_random_desc.yy",},},
+    {"id":{"name":"newHorizons2","path":"sounds/newHorizons2/newHorizons2.yy",},},
     {"id":{"name":"Bed1","path":"sprites/Bed1/Bed1.yy",},},
     {"id":{"name":"Bed1Full","path":"sprites/Bed1Full/Bed1Full.yy",},},
     {"id":{"name":"Bed2","path":"sprites/Bed2/Bed2.yy",},},
