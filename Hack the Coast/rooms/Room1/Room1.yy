@@ -243,6 +243,8 @@
     {"name":"inst_AE5A98A","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_15E1FA9A","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_6DE393F9","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_304F9F36","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_4109D23D","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -492,6 +494,8 @@
         {"$GMRInstance":"v4","%Name":"inst_2F39B484","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2F39B484","objectId":{"name":"oPlant","path":"objects/oPlant/oPlant.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.1396853,"scaleY":1.3125,"x":36.043785,"y":171.75,},
         {"$GMRInstance":"v4","%Name":"inst_33DA0247","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_33DA0247","objectId":{"name":"oPlant","path":"objects/oPlant/oPlant.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.35,"scaleY":1.4060961,"x":349.5874,"y":94.24815,},
         {"$GMRInstance":"v4","%Name":"inst_65AA8B85","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_65AA8B85","objectId":{"name":"oBookshelf","path":"objects/oBookshelf/oBookshelf.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.4545455,"scaleY":1.6458334,"x":45.0,"y":4.0,},
+        {"$GMRInstance":"v4","%Name":"inst_304F9F36","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_304F9F36","objectId":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.4201508,"scaleY":0.625,"x":164.0,"y":190.0,},
+        {"$GMRInstance":"v4","%Name":"inst_4109D23D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4109D23D","objectId":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.4201509,"scaleY":0.625,"x":188.0,"y":190.0,},
       ],"layers":[],"name":"backItems","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":500,"effectEnabled":true,"effectType":null,"gridX":24,"gridY":2,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
