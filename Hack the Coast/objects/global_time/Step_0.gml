@@ -55,9 +55,9 @@ if (global.phase == global.P_DAY && global.phase_t >= day_len) {
 
 function get_phase_name() {
     switch (global.phase) {
-        case global.P_INTAKE: return "MORNING (INTAKE)";
-        case global.P_DAY:    return "DAY";
-        case global.P_NIGHT:  return "NIGHT (REST)";
+        case global.P_INTAKE: return "(MORNING)";
+        case global.P_DAY:    return "(DAY)";
+        case global.P_NIGHT:  return "(NIGHT)";
         default:              return "UNKNOWN";
     }
 }
