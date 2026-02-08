@@ -108,6 +108,7 @@
     {"id":{"name":"Coathanger","path":"sprites/Coathanger/Coathanger.yy",},},
     {"id":{"name":"Countertop1","path":"sprites/Countertop1/Countertop1.yy",},},
     {"id":{"name":"Desk","path":"sprites/Desk/Desk.yy",},},
+    {"id":{"name":"Door","path":"sprites/Door/Door.yy",},},
     {"id":{"name":"ElderBackIdle","path":"sprites/ElderBackIdle/ElderBackIdle.yy",},},
     {"id":{"name":"ElderBackWalk","path":"sprites/ElderBackWalk/ElderBackWalk.yy",},},
     {"id":{"name":"ElderFrontIdle","path":"sprites/ElderFrontIdle/ElderFrontIdle.yy",},},

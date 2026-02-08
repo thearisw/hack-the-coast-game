@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sDoor",
-    "path":"sprites/sDoor/sDoor.yy",
+    "name":"Door",
+    "path":"sprites/Door/Door.yy",
   },
   "spriteMaskId":null,
   "visible":true,
