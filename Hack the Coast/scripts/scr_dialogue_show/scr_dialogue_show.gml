@@ -1,4 +1,4 @@
-function scr_dialogue_show(_text, _x, _y) {
-    var d = instance_create_layer(_x, _y, "UI", oDialogue);
+function scr_dialogue_show(_text) {
+    var d = instance_create_layer(room_width/2, room_height-20, "UI", oDialogue);
     d.text = _text;
 }

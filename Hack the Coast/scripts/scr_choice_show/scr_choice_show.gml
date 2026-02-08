@@ -1,8 +1,6 @@
-function scr_choice_show(_options, _x, _y) {
-	c=false;
-    with(instance_create_layer(_x, _y, "UI", oChoiceBox)) {
+function scr_choice_show(_options, objid) {
+    with(instance_create_layer(room_width/2, room_height-10, "UI", oChoiceBox)) {
 		options = _options;
-		other.c = selected;
+		parentid = objid;
 	}
-    return c;
 }
