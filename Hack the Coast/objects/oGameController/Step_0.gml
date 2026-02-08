@@ -9,8 +9,16 @@ if (global.phase == global.P_DAY) {
             // Spawn at bottom-center, slightly off-screen (room_height + 32)
             var spawn_x = room_width / 2;
             var spawn_y = room_height + 32; 
-            
-            var _inst = instance_create_layer(spawn_x, spawn_y, "Instances", oHomeless);
+             var age = irandom_range(10, 80);
+			 var sex = irandom_range(1,2);
+			 var has_disability = (random(100) < 15);
+			 var person = noone;
+			 if (has_disability) person = oHomelessWheel;
+			 else if(age <28) person = oHomelessChild;
+			 else if(age >65) person = oHomelessElder;
+			 else if(sex ==1) person = oHomeless;
+			 else if(sex ==2) person = oHomelessWomen;
+            var _inst = instance_create_layer(spawn_x, spawn_y, "Instances", person);
             
             // Set their initial target inside the room (20 pixels from bottom)
             // We add a little random X offset so they don't all stand in a perfect line
