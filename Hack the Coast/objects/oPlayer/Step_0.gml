@@ -36,11 +36,6 @@ if (place_meeting(x,y+vs,oWall)) {
 }
 y+= vs;
 
-if(keyboard_check_pressed(ord("E"))) {
-	scr_dialogue_show(
-    "I’ve been waiting since last night."
-)
-}
 
 // --- ZONE DETECTION ---
 active_zone = instance_place(x, y, oInteractionZone);
