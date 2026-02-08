@@ -41,6 +41,7 @@
     {"id":{"name":"oHomeless","path":"objects/oHomeless/oHomeless.yy",},},
     {"id":{"name":"oInteractionZone","path":"objects/oInteractionZone/oInteractionZone.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"oShelterManager","path":"objects/oShelterManager/oShelterManager.yy",},},
     {"id":{"name":"oStats","path":"objects/oStats/oStats.yy",},},
     {"id":{"name":"oWall_1","path":"objects/oWall_1/oWall_1.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
