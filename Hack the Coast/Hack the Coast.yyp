@@ -24,6 +24,7 @@
   "name":"Hack the Coast",
   "resources":[
     {"id":{"name":"global_time","path":"objects/global_time/global_time.yy",},},
+    {"id":{"name":"oDialogue","path":"objects/oDialogue/oDialogue.yy",},},
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
     {"id":{"name":"oGameController","path":"objects/oGameController/oGameController.yy",},},
     {"id":{"name":"oHomeless","path":"objects/oHomeless/oHomeless.yy",},},
