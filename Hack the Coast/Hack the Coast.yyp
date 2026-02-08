@@ -57,6 +57,7 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"Intro","path":"rooms/Intro/Intro.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"create_menu","path":"scripts/create_menu/create_menu.yy",},},
     {"id":{"name":"find_free_bed","path":"scripts/find_free_bed/find_free_bed.yy",},},
     {"id":{"name":"gc_admit_person","path":"scripts/gc_admit_person/gc_admit_person.yy",},},
     {"id":{"name":"gc_begin_morning","path":"scripts/gc_begin_morning/gc_begin_morning.yy",},},
