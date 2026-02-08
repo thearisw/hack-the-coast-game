@@ -1,7 +1,7 @@
 // --- YOUR EXISTING MOVEMENT CODE (UNCHANGED) ---
 key_left =  keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
-key_up = keyboard_check(ord("W"));
+key_up =    keyboard_check(ord("W"));
 key_down =  keyboard_check(ord("S"));
 
 hs = key_right - key_left;
@@ -32,8 +32,11 @@ if (place_meeting(x,y+vs,oWall)) {
 }
 y+= vs;
 
-// --- ZONE DETECTION ---
+// --- ZONE DETECTION (UPDATED) ---
 active_zone = instance_place(x, y, oInteractionZone);
+// Note: Ensure your Intake object is a child of oInteractionZone 
+// OR check specifically for oIntakeZone as well:
+if (active_zone == noone) active_zone = instance_place(x, y, oIntakeZone);
 
 if (active_zone != noone) {
     
@@ -46,6 +49,7 @@ if (active_zone != noone) {
     if (active_zone.menu_context == "bed_menu") {
         _full_text += "Occupied: " + string(global.beds_occupied) + "/" + string(global.bed_capacity) + "\n";
         _full_text += "Policy: " + string(global.bed_policy) + "\n";
+        _full_text += "[SPACE] Manage"; 
     }
     
     // --- B. FOOD ---
@@ -53,6 +57,7 @@ if (active_zone != noone) {
         _full_text += "Rations: " + string(global.food_rations) + "\n";
         _full_text += "Daily Use: " + string(global.food_daily_cost) + "\n";
         _full_text += "Policy: " + string(global.food_policy) + "\n";
+        _full_text += "[SPACE] Manage"; 
     }
     
     // --- C. STAFF ---
@@ -60,17 +65,24 @@ if (active_zone != noone) {
         _full_text += "Staff: " + string(global.staff_count) + "\n";
         _full_text += "Fatigue: " + string(global.staff_fatigue) + "%\n";
         _full_text += "Focus: " + string(global.staff_policy) + "\n";
+        _full_text += "[SPACE] Manage"; 
     }
 
-    // --- D. INTAKE ---
+    // --- D. INTAKE (NEW QUEUE LOGIC) ---
     else if (active_zone.menu_context == "intake_menu") {
-        _full_text += "Queue: " + string(global.refugees_waiting) + " People\n";
-        _full_text += "Est. Risk: " + string(global.projected_risk) + "%\n";
+        var q_len = 0;
+        // Check oGameController for queue length
+        if (instance_exists(oGameController)) {
+            q_len = array_length(oGameController.queue);
+        }
+
+        _full_text += "Waiting: " + string(q_len) + " People\n";
+        
+        if (q_len > 0) _full_text += "[SPACE] Process Next";
+        else _full_text += "Queue Empty";
     }
     
-    _full_text += "[SPACE] Manage"; 
-
-    // --- 3. CREATE OR UPDATE THE TEXTBOX (UPDATED) ---
+    // --- 3. CREATE OR UPDATE THE TEXTBOX ---
     // Check if the Menu (ChoiceBox) is open
     if (instance_exists(oChoiceBox)) {
         
@@ -92,10 +104,26 @@ if (active_zone != noone) {
     
     // 4. INPUT 
     if (keyboard_check_pressed(vk_space)) {
-        create_menu(active_zone.menu_context);
+        
+        // SPECIAL CASE: INTAKE QUEUE
+        if (active_zone.menu_context == "intake_menu") {
+            if (instance_exists(oGameController)) {
+                // Are there people in line?
+                if (array_length(oGameController.queue) > 0) {
+                    // Get the person at the front (Index 0)
+                    var _first_person = oGameController.queue[0];
+                    
+                    // Trigger the choice box specifically for THEM
+                    scr_choice_show(["Accept", "Reject"], _first_person, "intake_decision");
+                }
+            }
+        } 
+        // NORMAL CASE: OTHER MENUS
+        else {
+            create_menu(active_zone.menu_context);
+        }
     }
     
-
 } else {
     // --- WE LEFT THE ZONE ---
     if (instance_exists(my_textbox)) {

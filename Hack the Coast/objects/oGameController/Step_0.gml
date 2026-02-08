@@ -1,36 +1,39 @@
-// Only do this during NIGHT
+if (global.phase == global.P_DAY) { 
 
-if (global.phase == global.P_DAY) {
-    
     if (spawn_count < max_spawn_per_intake) {
         spawn_timer++;
         
         if (spawn_timer >= spawn_rate) {
-            // Spawn at bottom-center, slightly off-screen (room_height + 32)
-            var spawn_x = room_width / 2;
-            var spawn_y = room_height + 32; 
-             var age = irandom_range(10, 80);
-			 var sex = irandom_range(1,2);
-			 var has_disability = (random(100) < 15);
-			 var person = noone;
-			 if (has_disability) person = oHomelessWheel;
-			 else if(age <28) person = oHomelessChild;
-			 else if(age >65) person = oHomelessElder;
-			 else if(sex ==1) person = oHomeless;
-			 else if(sex ==2) person = oHomelessWomen;
-            var _inst = instance_create_layer(spawn_x, spawn_y, "Instances", person);
             
-            // Set their initial target inside the room (20 pixels from bottom)
-            // We add a little random X offset so they don't all stand in a perfect line
-            _inst.targetX = (room_width / 2);
-            _inst.targetY = room_height - 80; // Walk up into the room
+            // 1. GENERATE STATS & TYPE
+            var age = irandom_range(10, 80);
+            var sex = irandom_range(1,2);
+            var has_disability = (random(100) < 15);
+            
+            // Default to base class
+            var person_type = oHomeless;
+            
+            if (has_disability) person_type = oHomelessWheel;
+            else if(age < 28) person_type = oHomelessChild;
+            else if(age > 65) person_type = oHomelessElder;
+            else if(sex == 2) person_type = oHomelessWomen;
+            
+            // 2. SPAWN AT THE DOOR COORDINATES
+            var _inst = instance_create_layer(spawn_point_x, spawn_point_y, "Instances", person_type);
+            
+            // 3. FORCE INVISIBLE IMMEDIATELY (The Fix)
+            // This stops the "flash" of the person appearing at the door before the logic runs
+            _inst.visible = false;
+            
+            // 4. ADD TO QUEUE
+            array_push(queue, _inst);
             
             spawn_count++;
             spawn_timer = 0;
         }
     }
 } else {
-    // 3. Reset the count when intake is over so they can spawn tomorrow
+    // Reset counters when not in DAY/INTAKE phase
     spawn_count = 0;
     spawn_timer = 0;
 }

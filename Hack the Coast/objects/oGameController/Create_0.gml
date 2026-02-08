@@ -3,16 +3,20 @@ scr_globals_init();
 bed_list = ds_list_create();
 admitted = ds_list_create();
 
-hide_x = -10000;
-hide_y = -10000;
+// --- QUEUE SYSTEM ---
+queue = [];         
 
-// how many IN-GAME minutes into NIGHT until people disappear
-night_hide_delay_min = 30;   // change this (ex: 10, 30, 60)
-night_start_min = 0;
-night_hiding_done = false;
+// 1. SERVICE SPOT (The "Sweet Spot")
+// X = 208 (To the left of the desk)
+// Y = 176 (Vertically centered on the desk)
+service_x = 220;      
+service_y = 156;    
 
+// 2. SPAWN SPOT (The Door)
+spawn_point_x = room_width / 2;     
+spawn_point_y = room_height - 24;   
 
 spawn_timer = 0;
-spawn_rate = 15 * 30; // Spawn someone every 15 seconds)
-max_spawn_per_intake = 8; // Limit how many show up each morning
+spawn_rate = 60; 
+max_spawn_per_intake = 8; 
 spawn_count = 0;

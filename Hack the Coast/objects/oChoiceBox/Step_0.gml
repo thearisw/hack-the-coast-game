@@ -19,20 +19,43 @@ if (array_length(options) > 0) {
    // --- EXECUTE ---
     if (confirmed) {
         
-        // --- SITUATION A: INTAKE DECISION (Your existing code) ---
-        // We assume "intake_decision" is the default if context is empty, or specifically set
-        if (menu_context == "" || menu_context == "intake_decision") {
-            if (parentid != noone) {
+        // --- SITUATION A: INTAKE DECISION (UPDATED FOR QUEUE) ---
+        if (menu_context == "intake_decision") {
+            
+            if (instance_exists(parentid)) {
+                
+                // 1. REMOVE FROM QUEUE (So everyone steps forward)
+                if (instance_exists(oGameController)) {
+                    var _q = oGameController.queue;
+                    for (var i = 0; i < array_length(_q); i++) {
+                        if (_q[i] == parentid) {
+                            // Remove 1 item at index i
+                            array_delete(oGameController.queue, i, 1);
+                            break;
+                        }
+                    }
+                }
+
+                // 2. APPLY THE DECISION
                 if (selected == 0) {
-                    // Try to admit + assign a random free bed
+                    // ACCEPT
                     var ok = false;
                     if (instance_exists(oGameController)) {
-                        with (oGameController) ok = gc_admit_person(other.parentid);
+                         with (oGameController) ok = gc_admit_person(other.parentid);
                     }
                     parentid.accepted = ok; 
+                    
+                    if (ok) {
+                        // Move them inside (middle of room) so they don't block the door
+                        parentid.home_x = room_width / 2;
+                        parentid.home_y = 100; 
+                    }
                 } else {
+                    // REJECT
                     parentid.accepted = false;
+                    instance_destroy(parentid); // Remove from game
                 }
+                
                 parentid.choice = true; // Tell parent we are done
             }
         }
@@ -58,4 +81,3 @@ if (array_length(options) > 0) {
         instance_destroy(); // Close the box
     }
 }
-

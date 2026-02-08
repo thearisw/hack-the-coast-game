@@ -6,9 +6,6 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_45C162B9","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_3A740274","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_74AA1F88","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_4D832BE2","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_78727E42","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_2F201325","path":"rooms/Room1/Room1.yy",},
@@ -166,7 +163,6 @@
     {"name":"inst_51FC602F","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_1AAA43C","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_493F1531","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_70B303D7","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_4674701","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_2FDEE46B","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_3472B23","path":"rooms/Room1/Room1.yy",},
@@ -242,6 +238,10 @@
     {"name":"inst_1E3ECB8A","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_6BA2A446","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_67B28C94","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_45C162B9","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_3A740274","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_74AA1F88","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_70B303D7","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[

@@ -1,52 +1,84 @@
-// stop everything if hidden
+// 1. RUN PARENT LOGIC FIRST (So we can override it later)
+event_inherited();
+
+// stop everything if hidden (Night Hiding Override)
 if (hidden) { visible = false; exit; }
-visible = true;
 
 // -------------------------
-// helpers: ensure wander vars exist
+// QUEUE LOGIC (Before Acceptance)
 // -------------------------
-if (!variable_instance_exists(id, "home_x")) home_x = room_width/2;
-if (!variable_instance_exists(id, "home_y")) home_y = room_height/2;
-if (!variable_instance_exists(id, "wander_radius")) wander_radius = 60;
-if (!variable_instance_exists(id, "wander_timer")) wander_timer = irandom_range(30, 90);
-
-// function-like block: choose a new wander target
-var do_wander = function() {
-
-    if (wander_timer <= 0) {
-        targetX = home_x + irandom_range(-wander_radius, wander_radius);
-        targetY = home_y + irandom_range(-wander_radius, wander_radius);
-        wander_timer = irandom_range(30, 90);
+if (!accepted && instance_exists(oGameController)) {
+    
+    // DEFAULT TO INVISIBLE
+    visible = false; 
+    
+    var my_pos = -1;
+    var _q = oGameController.queue;
+    
+    // Find my index in the controller's queue
+    for (var i = 0; i < array_length(_q); i++) {
+        if (_q[i] == id) { my_pos = i; break; }
     }
-};
-wander_timer--;
-// -------------------------
-// PHASE BEHAVIOR: target selection
-// -------------------------
-if (global.phase == global.P_NIGHT) {
 
-    // go to bed ONLY at night
-    if ( instance_exists(oBed)) {
-		var close_bed = instance_nearest(x,y,oBed)
-        var bx = close_bed.x;
-        var by = close_bed.y;
+    if (my_pos == 0) {
+        // I AM FIRST IN LINE -> REVEAL MYSELF
+        visible = true; 
+        
+        // Walk to the Service Spot (In front of desk)
+        targetX = oGameController.service_x;
+        targetY = oGameController.service_y;
+    } 
+    else {
+        // I AM WAITING -> FORCE INVISIBLE & PIN TO DOOR
+        visible = false; 
+        
+        x = oGameController.spawn_point_x;
+        y = oGameController.spawn_point_y;
+        targetX = x;
+        targetY = y;
+    }
+}
 
+// -------------------------
+// ACCEPTED LOGIC (After Decision)
+// -------------------------
+else if (accepted) {
+    visible = true;
+    
+    // NIGHT BEHAVIOR
+    if (global.phase == global.P_NIGHT) {
+         if (instance_exists(oBed)) {
+            var close_bed = instance_nearest(x,y,oBed);
             targetX = close_bed.x;
             targetY = close_bed.y;
-
-    } else {
-        // No bed assigned? Don't freeze—wander instead
-        do_wander();
+            
+            if (point_distance(x, y, targetX, targetY) < 4) {
+                targetX = x; targetY = y; 
+            }
+         }
+    } 
+    // DAY BEHAVIOR
+    else {
+        // Move fully into the room so we don't block the next guy
+        if (!variable_instance_exists(id, "has_moved_in")) {
+             home_x = room_width / 2;
+             home_y = 100; 
+             has_moved_in = true;
+        }
+        
+        if (!variable_instance_exists(id, "wander_timer")) wander_timer = 60;
+        
+        wander_timer--;
+        if (wander_timer <= 0) {
+            targetX = home_x + irandom_range(-60, 60);
+            targetY = home_y + irandom_range(-60, 60);
+            wander_timer = irandom_range(60, 120);
+        }
     }
-
-}
-if ( global.phase == global.P_DAY){
-    // DAY / INTAKE: wander around (loiter)
-    do_wander();
 }
 
 // -------------------------
-// MOVE TOWARD targetX/targetY
+// MOVEMENT PHYSICS
 // -------------------------
 if (x > targetX + 3) hs = -1;
 else if (x < targetX - 3) hs = 1;
@@ -56,9 +88,7 @@ if (y > targetY + 3) vs = -1;
 else if (y < targetY - 3) vs = 1;
 else vs = 0;
 
-// -------------------------
-// WALL COLLISION (your logic)
-// -------------------------
+// Wall Collision X
 if (place_meeting(x + hs, y, oWall)) {
     while (abs(hs) > 0.1) {
         hs *= 0.5;
@@ -68,6 +98,7 @@ if (place_meeting(x + hs, y, oWall)) {
 }
 x += hs;
 
+// Wall Collision Y
 if (place_meeting(x, y + vs, oWall)) {
     while (abs(vs) > 0.1) {
         vs *= 0.5;
@@ -76,14 +107,3 @@ if (place_meeting(x, y + vs, oWall)) {
     vs = 0;
 }
 y += vs;
-
-// -------------------------
-// accept/destroy logic
-// -------------------------
-if (choice && accepted) accepted = true;
-else if (choice && !accepted) instance_destroy();
-
-timer++;
-
-// IMPORTANT: run parent Step so sprite switching works
-event_inherited();
