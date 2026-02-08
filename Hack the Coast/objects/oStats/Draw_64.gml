@@ -28,7 +28,7 @@ var display_mins = floor(global.game_min mod 60);
 
 // Simple padding for minutes (adds a '0' if less than 10)
 var min_pad = (display_mins < 10) ? "0" : "";
-var staff_string = string(global.staff_count);
+var money_string = string(global.money);
 
 // 5. Draw the Stats
 draw_set_font(Clock_Font); // Ensure you have a pixel font created
@@ -36,7 +36,7 @@ var draw_x = margin + 8;
 var draw_y = room_height - 30;
 var line_height = 10;
 
-draw_text(draw_x, draw_y, "Staff: " + global.staff_count);
+draw_text(draw_x, draw_y, "Money: " + money_string);
 
 // Optional: Resource bar for Staff satisfaction
 var bar_width = 100;
