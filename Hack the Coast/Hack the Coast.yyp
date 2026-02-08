@@ -44,6 +44,7 @@
     {"id":{"name":"oCountertop1","path":"objects/oCountertop1/oCountertop1.yy",},},
     {"id":{"name":"oDesk","path":"objects/oDesk/oDesk.yy",},},
     {"id":{"name":"oDialogue","path":"objects/oDialogue/oDialogue.yy",},},
+    {"id":{"name":"oDialogueSpec","path":"objects/oDialogueSpec/oDialogueSpec.yy",},},
     {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
     {"id":{"name":"oFoodZone","path":"objects/oFoodZone/oFoodZone.yy",},},

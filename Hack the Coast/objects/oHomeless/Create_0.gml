@@ -8,7 +8,9 @@ wander_radius = 30;
 wander_timer = irandom_range(30, 90);
 parentid = self;
 npc_kind = "homeless";
-
+sex=0;
+age=0;
+disabilities = false;
 hs = 0;
 vs = 0;
 

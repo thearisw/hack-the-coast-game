@@ -14,7 +14,7 @@ function scr_random_desc(age,sex,disabilities) {
     _desc = _stories[irandom(array_length(_stories) - 1)] +"\n" +
 	"Age: " + string(age)
 	+"\n Sex:" + sex_string
-	+"\n Disabilities: " + disabilities;
+	+"\n Disabilities: " + string(disabilities);
 
     
     return _desc;

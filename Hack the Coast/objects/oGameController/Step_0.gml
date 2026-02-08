@@ -6,9 +6,9 @@ if (global.phase == global.P_DAY) {
         if (spawn_timer >= spawn_rate) {
             
             // 1. GENERATE STATS & TYPE
-            var age = irandom_range(10, 80);
-            var sex = irandom_range(1,2);
-            var has_disability = (random(100) < 15);
+             age = irandom_range(10, 80);
+             sex = irandom_range(1,2);
+             has_disability = (random(100) < 15);
             
             // Default to base class
             var person_type = oHomeless;
@@ -24,7 +24,9 @@ if (global.phase == global.P_DAY) {
             // 3. FORCE INVISIBLE IMMEDIATELY (The Fix)
             // This stops the "flash" of the person appearing at the door before the logic runs
             _inst.visible = false;
-            
+            _inst.age = age;
+			_inst.sex = sex;
+			_inst.disabilities = has_disability
             // 4. ADD TO QUEUE
             array_push(queue, _inst);
             
