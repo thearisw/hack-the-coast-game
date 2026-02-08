@@ -25,6 +25,7 @@
   "name":"Hack the Coast",
   "resources":[
     {"id":{"name":"Clock_Font","path":"fonts/Clock_Font/Clock_Font.yy",},},
+    {"id":{"name":"Dialogue_Text","path":"fonts/Dialogue_Text/Dialogue_Text.yy",},},
     {"id":{"name":"Global_Time","path":"objects/Global_Time/Global_Time.yy",},},
     {"id":{"name":"oBedZone","path":"objects/oBedZone/oBedZone.yy",},},
     {"id":{"name":"oChoiceBox","path":"objects/oChoiceBox/oChoiceBox.yy",},},

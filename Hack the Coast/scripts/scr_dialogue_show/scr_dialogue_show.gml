@@ -1,4 +1,9 @@
 function scr_dialogue_show(_text) {
-    var d = instance_create_layer(room_width/2, room_height-20, "UI", oDialogue);
+    // We don't need to calculate x/y here anymore because 
+    // the object determines its own position on the GUI layer!
+    
+    var d = instance_create_layer(0, 0, "UI", oDialogue);
     d.text = _text;
+    
+    return d;
 }
