@@ -1,4 +1,4 @@
-Pp// stop everything if hidden
+// stop everything if hidden
 if (hidden) { visible = false; exit; }
 visible = true;
 
