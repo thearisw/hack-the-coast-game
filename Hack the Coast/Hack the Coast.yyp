@@ -25,8 +25,9 @@
   "name":"Hack the Coast",
   "resources":[
     {"id":{"name":"Clock_Font","path":"fonts/Clock_Font/Clock_Font.yy",},},
-    {"id":{"name":"global_time","path":"objects/global_time/global_time.yy",},},
+    {"id":{"name":"Global_Time","path":"objects/Global_Time/Global_Time.yy",},},
     {"id":{"name":"oDialogue","path":"objects/oDialogue/oDialogue.yy",},},
+    {"id":{"name":"oDoor","path":"objects/oDoor/oDoor.yy",},},
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
     {"id":{"name":"oGameController","path":"objects/oGameController/oGameController.yy",},},
     {"id":{"name":"oHomeless","path":"objects/oHomeless/oHomeless.yy",},},
@@ -49,6 +50,7 @@
     {"id":{"name":"HomelessWalkFront","path":"sprites/HomelessWalkFront/HomelessWalkFront.yy",},},
     {"id":{"name":"HomelessWalkLeft","path":"sprites/HomelessWalkLeft/HomelessWalkLeft.yy",},},
     {"id":{"name":"PlayerFrontWalk","path":"sprites/PlayerFrontWalk/PlayerFrontWalk.yy",},},
+    {"id":{"name":"sDoor","path":"sprites/sDoor/sDoor.yy",},},
     {"id":{"name":"sFloor","path":"sprites/sFloor/sFloor.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sWall_1","path":"sprites/sWall_1/sWall_1.yy",},},
