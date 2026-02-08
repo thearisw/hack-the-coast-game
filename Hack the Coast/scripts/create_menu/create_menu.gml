@@ -4,7 +4,7 @@ function create_menu(_context) {
     var _opts = [];
 
     if (_context == "bed_menu") {
-        _opts[0] = "Strict (Cap 8)";
+        _opts[0] = "Strict (Cap 10)";
         _opts[1] = "Overcrowd (Unlim)";
         scr_choice_show(_opts, noone, "bed_menu");
     }

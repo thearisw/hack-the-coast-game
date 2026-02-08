@@ -1,6 +1,6 @@
 if (array_length(options) > 0) {
 
-    // --- INPUT ---
+    // --- 1. INPUT ---
     if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
         selected--;
         if (selected < 0) selected = array_length(options) - 1;
@@ -11,25 +11,29 @@ if (array_length(options) > 0) {
         if (selected >= array_length(options)) selected = 0;
     }
 
-    // --- CONFIRM ---
+    // --- 2. CONFIRM ---
     if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) {
         confirmed = true;
     }
 
-   // --- EXECUTE ---
+    // --- 3. EXECUTE ---
     if (confirmed) {
         
-        // --- SITUATION A: INTAKE DECISION (UPDATED FOR QUEUE) ---
+        // --- CLEANUP TEXT BOXES ---
+        // This ensures the dialogue and specs disappear the moment you pick an option
+        if (instance_exists(oDialogue)) instance_destroy(oDialogue);
+        if (instance_exists(oDialogueSpec)) instance_destroy(oDialogueSpec);
+
+        // --- SITUATION A: INTAKE DECISION ---
         if (menu_context == "intake_decision") {
             
             if (instance_exists(parentid)) {
                 
-                // 1. REMOVE FROM QUEUE (So everyone steps forward)
+                // 1. REMOVE FROM QUEUE
                 if (instance_exists(oGameController)) {
                     var _q = oGameController.queue;
                     for (var i = 0; i < array_length(_q); i++) {
                         if (_q[i] == parentid) {
-                            // Remove 1 item at index i
                             array_delete(oGameController.queue, i, 1);
                             break;
                         }
@@ -46,27 +50,22 @@ if (array_length(options) > 0) {
                     parentid.accepted = ok; 
                     
                     if (ok) {
-                        // Move them inside (middle of room) so they don't block the door
                         parentid.home_x = room_width / 2;
                         parentid.home_y = 100; 
                     }
                 } else {
                     // REJECT
                     parentid.accepted = false;
-                    instance_destroy(parentid); // Remove from game
+                    instance_destroy(parentid); 
                 }
-                
-                // Tell parent we are done and what we picked
-				//parentid.entrance_choice = true; 
-				//parentid.final_decision = selected; // 0 for Accept, 1 for Reject
 
-				instance_destroy(); // Close the menu
+                instance_destroy(); // Close Choice Box
             }
         }
         
         // --- SITUATION B: BED ZONE ---
         else if (menu_context == "bed_menu") {
-            if (selected == 0) { global.bed_policy = "Strict"; global.bed_capacity = 8; }
+            if (selected == 0) { global.bed_policy = "Strict"; global.bed_capacity = 10; }
             if (selected == 1) { global.bed_policy = "Overcrowd"; global.bed_capacity = 999; }
         }
         
@@ -82,6 +81,6 @@ if (array_length(options) > 0) {
             if (selected == 1) { global.staff_policy = "Overwork"; }
         }
 
-        instance_destroy(); // Close the box
+        instance_destroy(); // Final safety destroy
     }
 }

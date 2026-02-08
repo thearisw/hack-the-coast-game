@@ -10,8 +10,8 @@
   "name":"oChoiceBox",
   "overriddenProperties":[],
   "parent":{
-    "name":"Zones",
-    "path":"folders/Objects/Zones.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -36,7 +36,7 @@ var _h = string_height(_txt);
 
 // --- DRAW BACKGROUND ---
 draw_set_color(c_black);
-draw_set_alpha(0.7); 
+draw_set_alpha(0.3); 
 
 draw_rectangle(
     _center_x - (_w / 2) - _padding - 20, 
