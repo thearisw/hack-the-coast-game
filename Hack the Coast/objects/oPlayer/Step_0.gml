@@ -7,6 +7,8 @@ key_down = keyboard_check(vk_down) ||  keyboard_check(ord("S"));
 hs = key_right - key_left;
 vs = key_down - key_up;
 
+if(vs>0) sprite_index = PlayerFrontWalk;
+
 
 
 if (place_meeting(x+hs,y,oWall)) {
@@ -34,5 +36,4 @@ if(keyboard_check_pressed(ord("E"))) {
     room_width/2,
     room_height-10
 )
-
 }
