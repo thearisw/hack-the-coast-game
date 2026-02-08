@@ -52,21 +52,28 @@ if (active_zone != noone) {
         _full_text += "[SPACE] Manage"; 
     }
     
-    // --- B. FOOD ---
-    else if (active_zone.menu_context == "food_menu") {
-        _full_text += "Rations: " + string(global.food_rations) + "\n";
-        _full_text += "Daily Use: " + string(global.food_daily_cost) + "\n";
-        _full_text += "Policy: " + string(global.food_policy) + "\n";
-        _full_text += "[SPACE] Manage"; 
-    }
+    // --- B. FOOD (Static/Previous Report) ---
+else if (active_zone.menu_context == "food_menu") {
+    _full_text += "Rations: " + string(global.food_rations) + "\n";
     
-    // --- C. STAFF ---
-    else if (active_zone.menu_context == "staff_menu") {
-        _full_text += "Staff: " + string(global.staff_count) + "\n";
-        _full_text += "Fatigue: " + string(global.staff_fatigue) + "%\n";
-        _full_text += "Focus: " + string(global.staff_policy) + "\n";
-        _full_text += "[SPACE] Manage"; 
-    }
+    // This will stay at 0 until the first night ends
+    _full_text += "Last Night's Use: " + string(global.report_food_used) + "\n"; 
+    
+    _full_text += "Policy: " + string(global.food_policy) + "\n";
+    _full_text += "[SPACE] Manage"; 
+}
+
+// --- C. STAFF (Static/Previous Report) ---
+else if (active_zone.menu_context == "staff_menu") {
+    _full_text += "Staff: " + string(global.staff_count) + "\n";
+    _full_text += "Current Fatigue: " + string(global.staff_fatigue) + "%\n";
+    
+    // This shows how much they gained/lost last night
+    _full_text += "Last Change: " + string(global.report_fatigue_change) + "%\n"; 
+    
+    _full_text += "Focus: " + string(global.staff_policy) + "\n";
+    _full_text += "[SPACE] Manage"; 
+}
 
     // --- D. INTAKE (NEW QUEUE LOGIC) ---
     else if (active_zone.menu_context == "intake_menu") {
@@ -114,6 +121,7 @@ if (active_zone != noone) {
                     var _first_person = oGameController.queue[0];
                     
                     // Trigger the choice box specifically for THEM
+					
                     scr_choice_show(["Accept", "Reject"], _first_person, "intake_decision");
 					var desc = scr_random_desc(_first_person.age,_first_person.sex,_first_person.disabilities);
 					scr_dialogue_show_spec(desc, room_width/2,100);

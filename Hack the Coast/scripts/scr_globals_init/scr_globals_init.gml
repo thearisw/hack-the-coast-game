@@ -1,5 +1,9 @@
 function scr_globals_init() {
-    // --- TIME & PROGRESS ---
+    global.report_food_used = 0;
+	global.report_fatigue_change = 0;
+	global.report_food_gained = 0;
+	
+	// --- TIME & PROGRESS ---
     global.day = 1;
 
     // --- RESOURCES ---

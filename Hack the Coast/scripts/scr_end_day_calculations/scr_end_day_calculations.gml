@@ -28,7 +28,7 @@ function scr_end_day_calculations(){
     // 1. FOOD CALCULATIONS
     // ===========================
     var _people_count = global.beds_occupied; 
-    var _cost_per_person = (global.food_policy == "Half") ? 2 : 4;
+    var _cost_per_person = (global.food_policy == "Half") ? 5 : 10;
     
     global.report_food_used = _people_count * _cost_per_person;
     global.food_rations -= global.report_food_used;

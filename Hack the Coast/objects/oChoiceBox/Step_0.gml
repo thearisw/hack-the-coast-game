@@ -27,6 +27,9 @@ if (array_length(options) > 0) {
         // --- SITUATION A: INTAKE DECISION ---
         if (menu_context == "intake_decision") {
             
+				if(global.beds_occupied== global.bed_capacity && global.bed_policy!="overflow") {
+					scr_dialogue_show_spec("Too many! Reject or change beds to overflow",0,0)
+				}
             if (instance_exists(parentid)) {
                 
                 // 1. REMOVE FROM QUEUE
@@ -41,7 +44,12 @@ if (array_length(options) > 0) {
                 }
 
                 // 2. APPLY THE DECISION
-                if (selected == 0) {
+				if(selected ==1){
+                    // REJECT
+                    parentid.accepted = false;
+                    instance_destroy(parentid); 
+                }
+                else if (selected == 0) {
                     // ACCEPT
                     var ok = false;
                     if (instance_exists(oGameController)) {
@@ -53,11 +61,7 @@ if (array_length(options) > 0) {
                         parentid.home_x = room_width / 2;
                         parentid.home_y = 100; 
                     }
-                } else {
-                    // REJECT
-                    parentid.accepted = false;
-                    instance_destroy(parentid); 
-                }
+                } else 
 
                 instance_destroy(); // Close Choice Box
             }
