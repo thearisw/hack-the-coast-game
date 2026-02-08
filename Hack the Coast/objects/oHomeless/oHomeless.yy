@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sHomeless",
-    "path":"sprites/sHomeless/sHomeless.yy",
+    "name":"HomelessFrontIdle",
+    "path":"sprites/HomelessFrontIdle/HomelessFrontIdle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
