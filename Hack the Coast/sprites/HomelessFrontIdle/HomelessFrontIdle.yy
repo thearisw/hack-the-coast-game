@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"HomelessFrontIdle",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":23,
   "bbox_left":6,
   "bbox_right":17,
