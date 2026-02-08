@@ -10,3 +10,5 @@ menu_context = "";   // Stores "bed_menu", "food_menu", "intake_decision", etc.
 // --- VISUALS ---
 padding = 8;         // Space around text
 line_height = 12;    // Space between lines
+m_decision_made_trigger = false;
+final_decision = -1;
