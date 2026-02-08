@@ -121,7 +121,7 @@
   "name":"Clock_Font",
   "parent":{
     "name":"Fonts",
-    "path":"folders/Fonts.yy",
+    "path":"folders/Objects/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[
