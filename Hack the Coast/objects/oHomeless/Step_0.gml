@@ -5,9 +5,9 @@ visible = true;
 // -------------------------
 // helpers: ensure wander vars exist
 // -------------------------
-if (!variable_instance_exists(id, "home_x")) home_x = x;
-if (!variable_instance_exists(id, "home_y")) home_y = y;
-if (!variable_instance_exists(id, "wander_radius")) wander_radius = 64;
+if (!variable_instance_exists(id, "home_x")) home_x = room_width/2;
+if (!variable_instance_exists(id, "home_y")) home_y = room_height/2;
+if (!variable_instance_exists(id, "wander_radius")) wander_radius = 10;
 if (!variable_instance_exists(id, "wander_timer")) wander_timer = irandom_range(30, 90);
 
 // function-like block: choose a new wander target

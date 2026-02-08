@@ -33,8 +33,8 @@ if (global.phase == global.P_INTAKE) {
             
             // Set their initial target inside the room (20 pixels from bottom)
             // We add a little random X offset so they don't all stand in a perfect line
-            _inst.targetX = (room_width / 2) + irandom_range(-40, 40);
-            _inst.targetY = room_height - 60; // Walk up into the room
+            _inst.targetX = (room_width / 2);
+            _inst.targetY = room_height - 80; // Walk up into the room
             
             spawn_count++;
             spawn_timer = 0;
