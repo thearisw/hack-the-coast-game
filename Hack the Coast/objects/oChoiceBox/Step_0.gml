@@ -7,7 +7,18 @@ if (keyboard_check_pressed(vk_down)) {
 }
 
 if (keyboard_check_pressed(vk_enter)) {
-    confirmed = true;
+    
+	confirmed = true;
 }
 
 
+if (confirmed) {
+
+	show_debug_message(confirmed);
+	show_debug_message(selected);
+    if(selected==0) other.accepted = true;
+	else other.accepted = false;
+	other.choice = true;
+    // destroy THIS choice box
+    instance_destroy();
+}

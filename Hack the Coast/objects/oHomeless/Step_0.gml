@@ -34,12 +34,15 @@ y+= vs;
 
 
 if(hs>0) sprite_index = HomelessRightWalk;
+if(!trigger) {
+	trigger=true
+	with(instance_create_layer(room_width/2, room_height-10, "UI", oChoiceBox)) {
+		options = ["Allow entry", "Turn away"];
+		other.choice = choice;
+		
+	}
+}
 
-
-
-	choice = scr_choice_show(
-    ["Allow entry", "Turn away"],
-    room_width/2,
-    room_height-10);
+	show_debug_message(accepted);
 if(choice && accepted) accepted =true;
-else if(!choice && !accepted) instance_destroy();
+else if(choice && !accepted) instance_destroy();
