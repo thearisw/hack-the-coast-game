@@ -56,7 +56,11 @@ if (array_length(options) > 0) {
                     instance_destroy(parentid); // Remove from game
                 }
                 
-                parentid.choice = true; // Tell parent we are done
+                // Tell parent we are done and what we picked
+				//parentid.entrance_choice = true; 
+				//parentid.final_decision = selected; // 0 for Accept, 1 for Reject
+
+				instance_destroy(); // Close the menu
             }
         }
         
