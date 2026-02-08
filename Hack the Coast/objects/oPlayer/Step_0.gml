@@ -62,28 +62,39 @@ if (active_zone != noone) {
         _full_text += "Focus: " + string(global.staff_policy) + "\n";
     }
 
-    // --- D. INTAKE (UPDATED FOR MANUAL CHOICE) ---
+    // --- D. INTAKE ---
     else if (active_zone.menu_context == "intake_menu") {
         _full_text += "Queue: " + string(global.refugees_waiting) + " People\n";
         _full_text += "Est. Risk: " + string(global.projected_risk) + "%\n";
-        // Note: No "Policy" here because YOU are the policy.
     }
     
-    _full_text += "[SPACE] Manage"; // Instruction line
+    _full_text += "[SPACE] Manage"; 
 
-    // 3. CREATE OR UPDATE THE TEXTBOX
-    if (!instance_exists(my_textbox)) {
-        my_textbox = scr_dialogue_show(_full_text);
+    // --- 3. CREATE OR UPDATE THE TEXTBOX (UPDATED) ---
+    // Check if the Menu (ChoiceBox) is open
+    if (instance_exists(oChoiceBox)) {
+        
+        // IF MENU IS OPEN: Hide the info text so it's not messy
+        if (instance_exists(my_textbox)) {
+            instance_destroy(my_textbox);
+            my_textbox = noone;
+        }
+        
     } else {
-        my_textbox.text = _full_text;
+        
+        // IF MENU IS CLOSED: Show/Update the info text
+        if (!instance_exists(my_textbox)) {
+            my_textbox = scr_dialogue_show(_full_text);
+        } else {
+            my_textbox.text = _full_text;
+        }
     }
     
-    // 4. INPUT (Commented out until we build the menu!)
-    /*
+    // 4. INPUT 
     if (keyboard_check_pressed(vk_space)) {
         create_menu(active_zone.menu_context);
     }
-    */
+    
 
 } else {
     // --- WE LEFT THE ZONE ---
