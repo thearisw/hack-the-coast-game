@@ -45,10 +45,9 @@
     {"id":{"name":"oHomelessElder","path":"objects/oHomelessElder/oHomelessElder.yy",},},
     {"id":{"name":"oHomelessWheel","path":"objects/oHomelessWheel/oHomelessWheel.yy",},},
     {"id":{"name":"oHomelessWomen","path":"objects/oHomelessWomen/oHomelessWomen.yy",},},
-<<<<<<< Updated upstream
+
     {"id":{"name":"oIntakeZone","path":"objects/oIntakeZone/oIntakeZone.yy",},},
-=======
->>>>>>> Stashed changes
+
     {"id":{"name":"oInteractionZone","path":"objects/oInteractionZone/oInteractionZone.yy",},},
     {"id":{"name":"oIntro","path":"objects/oIntro/oIntro.yy",},},
     {"id":{"name":"oNPCBase","path":"objects/oNPCBase/oNPCBase.yy",},},
