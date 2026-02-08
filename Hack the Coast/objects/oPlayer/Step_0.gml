@@ -36,6 +36,13 @@ if(keyboard_check_pressed(ord("E"))) {
 )
 }
 
-if (place_meeting(x+hs,y,oInteractionZone)) {
-	
+// 1. Detect if we are standing on a zone
+active_zone = instance_place(x, y, oInteractionZone);
+
+// 2. Input to Open Menu
+if (active_zone != noone) {
+    if (keyboard_check_pressed(vk_space)) {
+        // We will build this menu script in the next step!
+        create_menu(active_zone.menu_context);
+    }
 }
