@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oBed3",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oBookshelf",
+  "eventList":[],
   "managed":true,
-  "name":"oBed3",
+  "name":"oBookshelf",
   "overriddenProperties":[],
   "parent":{
     "name":"Furniture",
     "path":"folders/Objects/Furniture.yy",
   },
   "parentObjectId":{
-    "name":"oBed",
-    "path":"objects/oBed/oBed.yy",
+    "name":"oWall",
+    "path":"objects/oWall/oWall.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Bed3",
-    "path":"sprites/Bed3/Bed3.yy",
+    "name":"Bookshelf",
+    "path":"sprites/Bookshelf/Bookshelf.yy",
   },
   "spriteMaskId":null,
   "visible":true,
