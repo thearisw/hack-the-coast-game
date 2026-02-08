@@ -9,3 +9,5 @@ if (keyboard_check_pressed(vk_down)) {
 if (keyboard_check_pressed(vk_enter)) {
     confirmed = true;
 }
+
+

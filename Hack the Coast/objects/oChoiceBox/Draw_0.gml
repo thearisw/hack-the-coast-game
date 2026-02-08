@@ -22,3 +22,10 @@ for (var i = 0; i < array_length(options); i++) {
     draw_set_color(c_black);
     draw_text(tx, ty, options[i]);
 }
+
+if (confirmed) {
+    
+    // destroy THIS choice box
+    instance_destroy();
+}
+
