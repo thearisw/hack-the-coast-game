@@ -6,8 +6,8 @@
   "name":"oFloor",
   "overriddenProperties":[],
   "parent":{
-    "name":"objects",
-    "path":"folders/objects.yy",
+    "name":"Furniture",
+    "path":"folders/Objects/Furniture.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFloor",
-    "path":"sprites/sFloor/sFloor.yy",
+    "name":"floorTile",
+    "path":"sprites/floorTile/floorTile.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gc_begin_night",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gc_begin_night",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
